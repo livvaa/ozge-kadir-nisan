@@ -1,4 +1,11 @@
-/*! Copyright (c) 2026 livvaa — Tüm hakları saklıdır / All rights reserved. Bkz. LICENSE */
+/*!
+ * Dantel Davetiye — Copyright (c) 2026 livvaa. Tüm hakları saklıdır.
+ * 5846 sayılı Fikir ve Sanat Eserleri Kanunu ile korunur. Yazılı izin olmadan
+ * kopyalanamaz, uyarlanamaz, başka ad ya da alan adıyla yayımlanamaz.
+ * Görülebilir olması kullanım izni vermez.
+ * All rights reserved. No copying, adaptation or redeployment without
+ * written permission. Ayrıntılar / Details: LICENSE
+ */
 /*
  * Gül yaprakları: verilen bölümün içinde bir kez yağar, bitince kendini
  * temizler. Bölüme bağlı olduğu için sayfa kayınca yapraklar da onunla gider.

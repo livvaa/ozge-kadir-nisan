@@ -1,3 +1,7 @@
+# Dantel Davetiye — Copyright (c) 2026 livvaa. Tüm hakları saklıdır.
+# 5846 sayılı Fikir ve Sanat Eserleri Kanunu ile korunur. Yazılı izin olmadan
+# kopyalanamaz, uyarlanamaz, başka ad ya da alan adıyla yayımlanamaz.
+# All rights reserved. Ayrıntılar / Details: LICENSE
 """Davetiyeyi yerel sunucuda açar.
 
 Kullanım:  python serve.py          (varsayılan port 8000)
