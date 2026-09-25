@@ -1,0 +1,28 @@
+# Davetiye sitesi
+#
+# AMAÇ: WhatsApp, Instagram, Facebook, X, Telegram gibi uygulamalar link
+# paylaşılınca önizleme (başlık + görsel) gösterebilsin, ama site Google gibi
+# arama motorlarının sonuçlarında çıkmasın.
+#
+# ÖNEMLİ: Arama sonuçlarından uzak tutma işini bu dosya değil, index.html'deki
+# <meta name="robots" content="noindex"> etiketi (ve _headers dosyası) yapar.
+# Arama motorları burada "Disallow" ile engellenirse sayfayı okuyamaz, noindex
+# etiketini göremez ve başka yerde paylaşılan link yine de sonuçlarda
+# çıkabilir. Bu yüzden herkese okuma izni veriyoruz; sayfa okunur ama
+# dizine EKLENMEZ.
+
+# Sosyal medya önizleme botları (açıkça izinli).
+# Instagram ve Facebook önizlemeleri facebookexternalhit ile çekilir.
+User-agent: facebookexternalhit
+User-agent: Facebot
+User-agent: WhatsApp
+User-agent: Twitterbot
+User-agent: TelegramBot
+User-agent: LinkedInBot
+User-agent: Slackbot
+User-agent: Discordbot
+Allow: /
+
+# Diğer tüm botlar sayfayı okuyabilir; noindex etiketi yüzünden dizine eklemez
+User-agent: *
+Allow: /

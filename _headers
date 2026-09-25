@@ -1,0 +1,5 @@
+# Cloudflare Pages ve Netlify bu dosyayı okur (diğer sunucularda etkisizdir).
+# Sayfa ve dosyalar arama motoru sonuçlarına eklenmesin. Sosyal medya
+# önizleme botları bu başlığı dikkate almaz, önizleme çalışmaya devam eder.
+/*
+  X-Robots-Tag: noindex, nofollow, noarchive

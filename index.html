@@ -1,0 +1,207 @@
+<!doctype html>
+<!-- Copyright (c) 2026 livvaa — Tüm hakları saklıdır / All rights reserved. Bkz. LICENSE -->
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <meta name="theme-color" content="#3b1520">
+  <!-- Karanlık mod kapalı: telefon, WhatsApp ya da Instagram karanlık modda olsa da
+       site hep açık renkli kalır (Chrome/Android uygulama içi tarayıcılar + eski Safari) -->
+  <meta name="color-scheme" content="only light">
+  <meta name="supported-color-schemes" content="light">
+
+  <!-- Arama motoru sonuçlarında görünmesin. Sosyal medya önizlemesini etkilemez. -->
+  <meta name="robots" content="noindex, nofollow, noarchive">
+
+  <title>Özge &amp; Kadir · Nişan Davetiyesi</title>
+  <meta name="description" content="25 Ekim 2026 Pazar, saat 17.00 · Silva Davet Evi, Giresun">
+
+  <!-- WhatsApp / Instagram / Facebook / X link önizlemesi.
+       Önizleme botları JavaScript çalıştırmaz: davetiye bilgileri değişirse bu satırlar
+       da elle güncellenmeli. og:url ve og:image tam adres olmalı; site başka bir
+       alan adına taşınırsa bu iki satırı da değiştirin. -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://livvaa.github.io/ozge-kadir-nisan/">
+  <meta property="og:locale" content="tr_TR">
+  <meta property="og:title" content="Özge &amp; Kadir · Nişan Davetiyesi">
+  <meta property="og:description" content="25 Ekim 2026 Pazar, saat 17.00 · Silva Davet Evi, Giresun">
+  <meta property="og:image" content="https://livvaa.github.io/ozge-kadir-nisan/og-image.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Özge &amp; Kadir nişan davetiyesi">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&family=Pinyon+Script&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="is-locked">
+
+  <!-- Açılış: dantel kapaklı zarf -->
+  <div class="intro" id="intro">
+    <div class="intro__lace" data-lace="doily"></div>
+    <p class="intro__to" id="introTo" hidden></p>
+    <div class="env" id="env">
+      <div class="env__back"><div class="env__liner" data-lace="doily"></div></div>
+      <div class="env__card">
+        <div class="env__card-lace" data-lace="doily"></div>
+        <p class="env__card-names"><span data-bind="gelin"></span> <em>&amp;</em> <span data-bind="damat"></span></p>
+        <p class="env__card-date" data-bind="tarihUzun"></p>
+      </div>
+      <div class="env__front"></div>
+      <div class="env__flap" data-lace="flap"></div>
+      <button class="seal" id="seal" type="button" aria-label="Davetiyeyi aç">
+        <span class="seal__wax" data-lace="seal"></span>
+        <span class="seal__txt"><span data-bind="gelinHarf"></span><i>&amp;</i><span data-bind="damatHarf"></span></span>
+      </button>
+    </div>
+    <p class="intro__hint">Açmak için mühre dokunun</p>
+  </div>
+
+  <main class="page" id="page">
+    <div class="trim trim--top" aria-hidden="true"></div>
+
+    <section class="hero">
+      <div class="hero__lace" data-lace="doily-wide"></div>
+      <p class="eyebrow reveal" data-bind="ustBaslik"></p>
+      <h1 class="names reveal" id="names" tabindex="-1">
+        <span data-bind="gelin"></span>
+        <span class="names__amp">&amp;</span>
+        <span data-bind="damat"></span>
+      </h1>
+      <p class="hero__date reveal" data-bind="tarihNoktali"></p>
+    </section>
+
+    <section class="section invite" id="davet">
+      <!-- Aileler: bu davetiyede istenmedi. Açmak için yorum işaretlerini kaldırın
+           ve config.js'teki gelinAilesi / damatAilesi satırlarını açın.
+      <div class="families reveal">
+        <p><small>Gelinin ailesi</small><span data-bind="gelinAilesi"></span></p>
+        <p><small>Damadın ailesi</small><span data-bind="damatAilesi"></span></p>
+      </div>
+      -->
+      <div class="divider reveal" data-lace="divider"></div>
+      <p class="message reveal" data-bind="mesaj"></p>
+    </section>
+
+    <section class="section when" id="zaman">
+      <p class="eyebrow reveal">Tarihi kaydedin</p>
+      <h2 class="title reveal" data-bind="gunBasligi"></h2>
+      <div class="medallion reveal">
+        <div class="medallion__lace" data-lace="doily-plain"></div>
+        <div class="medallion__text">
+          <span class="medallion__weekday" data-bind="gunAdi"></span>
+          <span class="medallion__day" data-bind="gunNo"></span>
+          <span class="medallion__month" data-bind="ayYil"></span>
+          <span class="medallion__time" data-bind="saat"></span>
+        </div>
+      </div>
+      <div class="countdown reveal" id="countdown">
+        <div><b data-cd="d">0</b><span>Gün</span></div>
+        <div><b data-cd="h">0</b><span>Saat</span></div>
+        <div><b data-cd="m">0</b><span>Dakika</span></div>
+        <div><b data-cd="s">0</b><span>Saniye</span></div>
+      </div>
+      <p class="countdown-done" id="countdownDone" hidden>Büyük gün geldi!</p>
+      <button class="btn btn--ghost reveal" id="addCal" type="button">Takvime Ekle</button>
+    </section>
+
+    <!-- Program: bu davetiyede istenmedi. Açmak için yorum işaretlerini kaldırın
+         ve config.js'teki program bloğunu açın.
+    <section class="section program" id="program">
+      <p class="eyebrow reveal">Akış</p>
+      <h2 class="title reveal">Günün Programı</h2>
+      <ol class="timeline" id="timeline"></ol>
+    </section>
+    -->
+
+    <section class="section where" id="mekan">
+      <p class="eyebrow reveal">Nerede</p>
+      <h2 class="title reveal">Mekân</h2>
+      <div class="venue reveal">
+        <div class="venue__badge">
+          <div data-lace="doily-plain"></div>
+          <svg class="venue__pin" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s7-6.1 7-12a7 7 0 1 0-14 0c0 5.9 7 12 7 12Z"/><circle cx="12" cy="10" r="2.6"/></svg>
+        </div>
+        <div class="venue__map" id="venueMap" hidden>
+          <iframe id="mapFrame" title="Mekân haritası" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        </div>
+        <h3 class="venue__name" data-bind="mekanAdi"></h3>
+        <p class="venue__addr" data-bind="mekanAdres"></p>
+        <div class="venue__actions">
+          <a class="btn btn--solid" id="dirBtn" target="_blank" rel="noopener">Yol Tarifi Al</a>
+          <a class="btn btn--ghost" id="mapBtn" target="_blank" rel="noopener">Haritada Gör</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- LCV (katılım anketi): bu davetiyede istenmedi. Açmak için yorum işaretlerini
+         kaldırın ve config.js'teki lcv bloğunu açın.
+    <section class="section rsvp" id="lcv">
+      <p class="eyebrow reveal">LCV</p>
+      <h2 class="title reveal">Katılım Durumu</h2>
+      <p class="rsvp__note reveal" data-bind="lcvNot"></p>
+      <form class="rsvp__form reveal" id="rsvpForm" novalidate>
+        <label class="field">
+          <span>Ad Soyad</span>
+          <input name="ad" autocomplete="name" required>
+        </label>
+        <fieldset class="choice">
+          <legend>Katılım</legend>
+          <label><input type="radio" name="katilim" value="evet"><span>Katılıyorum</span></label>
+          <label><input type="radio" name="katilim" value="hayir"><span>Katılamıyorum</span></label>
+        </fieldset>
+        <label class="field" id="countField">
+          <span>Kişi sayısı</span>
+          <select name="kisi">
+            <option>1</option><option>2</option><option>3</option>
+            <option>4</option><option>5</option><option>6</option>
+          </select>
+        </label>
+        <label class="field">
+          <span>Notunuz <i>(isteğe bağlı)</i></span>
+          <textarea name="not" rows="3"></textarea>
+        </label>
+        <p class="form-error" id="formError" role="alert" hidden></p>
+        <button class="btn btn--solid" type="submit" id="rsvpSubmit">Gönder</button>
+      </form>
+      <div class="rsvp__thanks" id="rsvpThanks" tabindex="-1" hidden>
+        <div class="rsvp__thanks-lace" data-lace="doily"></div>
+        <p class="rsvp__thanks-title" id="thanksTitle"></p>
+        <p class="rsvp__thanks-text" id="thanksText"></p>
+        <button class="link-btn" id="rsvpEdit" type="button">Yanıtı değiştir</button>
+      </div>
+    </section>
+    -->
+
+    <footer class="closing">
+      <div class="closing__lace" data-lace="doily"></div>
+      <p class="closing__script reveal">Sizi aramızda görmek dileğiyle</p>
+      <p class="closing__names reveal"><span data-bind="gelin"></span> &amp; <span data-bind="damat"></span></p>
+      <p class="closing__tag reveal" data-bind="hashtag"></p>
+    </footer>
+    <div class="trim trim--bottom" aria-hidden="true"></div>
+  </main>
+
+  <button class="fab autoscroll" id="autoBtn" type="button" aria-label="Otomatik kaydırmayı durdur" aria-pressed="true" data-scroll-control hidden>
+    <svg class="autoscroll__ring" viewBox="0 0 48 48" aria-hidden="true"><circle class="autoscroll__fill" cx="24" cy="24" r="23" pathLength="100"/></svg>
+    <svg class="autoscroll__icon autoscroll__icon--pause" viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="6" width="3.4" height="12" rx="1.2"/><rect x="13.6" y="6" width="3.4" height="12" rx="1.2"/></svg>
+    <svg class="autoscroll__icon autoscroll__icon--play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.8v12.4a.8.8 0 0 0 1.2.7l9.8-6.2a.8.8 0 0 0 0-1.4L9.2 5.1a.8.8 0 0 0-1.2.7Z"/></svg>
+  </button>
+  <button class="scroll-next" id="nextBtn" type="button" aria-label="Sonraki bölüme geç" data-scroll-control hidden>
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 6.5l5 4.5 5-4.5"/><path d="M7 12.5l5 4.5 5-4.5"/></svg>
+  </button>
+  <button class="fab music" id="musicBtn" type="button" aria-label="Müziği durdur" aria-pressed="true" hidden>
+    <span></span><span></span><span></span>
+  </button>
+  <audio id="audio" loop preload="none"></audio>
+
+  <script src="js/config.js"></script>
+  <script src="js/lace.js"></script>
+  <script src="js/autoscroll.js"></script>
+  <script src="js/petals.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
