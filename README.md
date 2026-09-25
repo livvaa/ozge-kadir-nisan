@@ -10,6 +10,20 @@ python serve.py
 
 Tarayıcı `http://localhost:8000` adresinde açılır. Aynı Wi-Fi'daki telefondan açmak için ekrana yazılan ikinci adresi kullanın. `index.html` dosyasını doğrudan açmak da çalışır. Yayın için klasörün tamamını alan adınızın köküne yükleyin (Cloudflare Pages, Netlify, cPanel vb.).
 
+## Yayın (GitHub Pages)
+
+Site `https://livvaa.github.io/ozge-kadir-nisan/` adresinde yayındadır (depo: `livvaa/ozge-kadir-nisan`, `main` dalının kökü).
+
+Değişiklik yaptıktan sonra yayına almak için bu klasörde:
+
+```
+git add -A
+git commit -m "Değişikliğin kısa açıklaması"
+git push
+```
+
+Birkaç dakika içinde site güncellenir. Özel alan adı bağlamak için GitHub'da depo **Settings → Pages → Custom domain**; ardından [index.html](index.html) içindeki `og:url` ve `og:image` adreslerini yeni alan adıyla değiştirin.
+
 ## Düzenleme
 
 Bütün içerik [js/config.js](js/config.js) dosyasındadır: etkinlik türü, isimler, tarih, mekân, müzik, otomatik kaydırma. Boş bırakılan alanlar sayfada gizlenir.
